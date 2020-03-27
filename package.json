@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vivxz/portfolio.git",
+  "author": "vivianquan <viviannquan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -d -w"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.9.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
