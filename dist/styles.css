@@ -1,7 +1,13 @@
-body {
+html,
+body,
+#portfolio {
   background: url('images/background.png');
   background-repeat: no-repeat;
   font-family: 'Open Sans Condensed', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 480px) {
@@ -137,4 +143,11 @@ body {
 
 .links:hover {
   color: #000;
+}
+
+/* ABOUT */
+.profile-picture {
+  border-radius: 5%;
+  width: 40%;
+  margin: -40px 0 0em 9em
 }
