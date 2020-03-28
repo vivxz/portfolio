@@ -1,15 +1,26 @@
 import React from 'react';
-import Name from './Name.jsx';
-import Navbar from './Navbar.jsx';
+import { Router } from '@reach/router';
+import Home from './Home';
+import About from './About';
+import Project from './Project';
+import Contact from './Contact';
 
 const App = () => {
+  // state = {clicked: false}
   return (
-    <div className="container">
-      <header>
-        <Name />
-        <Navbar />
-      </header>
-    </div >
+    <React.StrictMode>
+      <div className="container">
+        <header>
+          <Home />
+        </header>
+        <Router>
+          <Home path="/" exact />
+          <About path="/about" />
+          <Project path="/project" />
+          <Contact path="/contact" />
+        </Router>
+      </div >
+    </React.StrictMode>
   )
 }
 
