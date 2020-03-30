@@ -1,7 +1,7 @@
 html,
 body,
 #portfolio {
-  background: url('images/background.png');
+  background: url('https://vivs-portfolio.s3-us-west-1.amazonaws.com/background.png');
   background-repeat: no-repeat;
   font-family: 'Open Sans Condensed', sans-serif;
   height: 100%;
