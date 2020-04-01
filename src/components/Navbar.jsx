@@ -7,12 +7,12 @@ class Navbar extends Component {
 
 
   render() {
-    const resume = () => navigate('https://bit.ly/39ieym9');
+    // const resume = () => navigate('https://bit.ly/39ieym9');
     return (
       <div className="navbar" >
         <nav className="nav">
           <Link className="links" to='/about'>About </Link>{' '}
-          <Link className="links" to='/resume' onClick={resume}>Resume </Link>
+          <Link className="links" to='/resume' >Resume </Link>
           <Link className="links" to='/project'>Project </Link>
           <Link className="links" to='/contact'>Contact </Link>
         </nav>
