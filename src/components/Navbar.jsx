@@ -13,7 +13,7 @@ class Navbar extends Component {
         <nav className="nav">
           <Link className="links" to='/about'>About </Link>{' '}
           <Link className="links" to='/resume' >Resume </Link>
-          <Link className="links" to='/project'>Project </Link>
+          <Link className="links" to='/project'>Applications </Link>
           <Link className="links" to='/contact'>Contact </Link>
         </nav>
       </div>
