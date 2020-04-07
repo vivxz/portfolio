@@ -14,8 +14,8 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <div className="content">
+    <div className="home-container">
+      <div className="name-content">
         <h1 className="full-name">{fullName.slice(0, nameLength)}</h1>
         {/* <span className="typewriter"></span> */}
         <p className="titles">Software Engineer | Developer | Creator</p>
