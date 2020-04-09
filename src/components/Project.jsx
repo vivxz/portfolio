@@ -6,7 +6,7 @@ const Project = () => {
       <div className="apps-sections">
         <h1>Applications</h1>
       </div>
-      <div classname="apps-sections fe">
+      <div className="apps-sections fe">
         <h2>LalaLime - Front End</h2>
         <div className="techstack">
           <p>MongoDB | Mongoose | Node.js | Express | React | Heroku</p>
@@ -21,7 +21,7 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div classname="apps-sections fe">
+      <div className="apps-sections fe">
         <h2>Anthropologie Clone - Back End</h2>
         <div className="techstack">
           <p>PostgreSQL | Express | Node.js | New Relic | AWS EC2 | Artillery.io | loader.io | Nginx</p>
@@ -36,12 +36,12 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div classname="apps-sections fe">
+      <div className="apps-sections fe">
         <h2>PAVÉ - Full-Stack</h2>
         <div className="techstack">
           <p>MongoDB | Mongoose | Node.js | Express | React | AWS EC2</p>
           <div className="appreview">
-            PREVIEW HERE!!!
+            <video muted src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pave.mp4" alt="PAVÉ" className="app-video" />
           </div>
           <div className="app-description">
             <p>EXPLAIN APPLICATION HERE</p>
