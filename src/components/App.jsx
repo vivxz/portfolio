@@ -7,7 +7,7 @@ import Contact from './Contact';
 import Resume from './Resume';
 
 const App = () => {
-  // state = {clicked: false}
+
   return (
     <React.StrictMode>
       <div className="container">
@@ -18,7 +18,7 @@ const App = () => {
           <Home path="/" exact />
           <About path="/about" />
           <Resume path="/resume" />
-          <Project path="/project" />
+          <Project path="/apps" />
           <Contact path="/contact" />
         </Router>
       </div >
