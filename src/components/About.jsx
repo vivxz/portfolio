@@ -1,8 +1,9 @@
 import React from 'react';
 import { Dialog } from "@reach/dialog";
+import stacks from '../data/stacks.js';
+import Skills from './Skills';
 
 const About = ({ showDialog, navAbout, close }) => {
-
   return (
     <>
       {navAbout ? (
@@ -32,13 +33,38 @@ const About = ({ showDialog, navAbout, close }) => {
               <hr />
               <h3>Technical Skills</h3>
               <div className="techskills">
-                <p>Front End: Javascript (ES5 & ES6) | HTML5 | CSS3 | React | JQuery | React Native</p>
-
-                <p>Back End: Node.js | Express | PostgreSQL | MongoDB | Mongoose | MySQL | RESTful API | NGINX | Firebase</p>
-
-                <p>Testing/Deployment: Mocha | Chai | AWS EC2 | AWS S3 | Heroku | New Relic | Artillery | Agile Methodology</p>
-
-                <p>Developer Tools: Git | npm | yarn | Webpack | Babel | TDD </p>
+                <div className="stack-name">Front End:</div>
+                <div className="stack-type">
+                  {stacks.frontend.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
+                <div className="stack-name">Back End:</div>
+                <div className="stack-type">
+                  {stacks.backend.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
+                <div className="stack-name">Testing/Deployment:</div>
+                <div className="stack-type">
+                  {stacks.testing.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
+                <div className="stack-name">Developer Tools:</div>
+                <div className="stack-type">
+                  {stacks.tools.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>
