@@ -13,7 +13,7 @@ const Resume = ({ showDialog, navResume, close }) => {
             CLOSE
           </button>
           <div className="resume-container">
-            <object width="100%" height="450px" data="https://vivs-portfolio.s3-us-west-1.amazonaws.com/resume.pdf" type="application/pdf" />
+            <object className="resume" data="https://vivs-portfolio.s3-us-west-1.amazonaws.com/resume.pdf" type="application/pdf" />
           </div>
         </Dialog>
       ) : null
