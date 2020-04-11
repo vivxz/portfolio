@@ -18,8 +18,8 @@ const Project = ({ navApps, showDialog, close }) => {
               <div className="techstack">
                 <p>MongoDB | Mongoose | Node.js | Express | React | Heroku</p>
                 <div className="appreview">
-                  PREVIEW HERE!!!
-          </div>
+                  <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/demo.gif" alt="LalaLime" className="app-img" />
+                </div>
                 <div className="app-description">
                   <p>EXPLAIN APPLICATION HERE</p>
                   <li>Created and deployed a <strong>microservice</strong> of the navigation bar that allows users to browse through the webpage through the use of conditional rendering to simulate an actual product that mimics LuluLemon’s search functionality</li>
@@ -28,13 +28,13 @@ const Project = ({ navApps, showDialog, close }) => {
                 </div>
               </div>
             </div>
-            <div className="apps-sections fe">
+            <div className="apps-sections be">
               <h2>Anthropologie Clone - Back End</h2>
               <div className="techstack">
                 <p>PostgreSQL | Express | Node.js | New Relic | AWS EC2 | Artillery.io | loader.io | Nginx</p>
                 <div className="appreview">
                   PREVIEW HERE!!!
-          </div>
+                </div>
                 <div className="app-description">
                   <p>EXPLAIN APPLICATION HERE</p>
                   <li>Created and utilized a script to generate <strong>10M</strong> mock records to populate both SQL and noSQL databases to emulate a realistic testing scenario </li>
@@ -43,7 +43,7 @@ const Project = ({ navApps, showDialog, close }) => {
                 </div>
               </div>
             </div>
-            <div className="apps-sections fe">
+            <div className="apps-sections fs">
               <h2>PAVÉ - Full-Stack</h2>
               <div className="techstack">
                 <p>MongoDB | Mongoose | Node.js | Express | React | AWS EC2</p>
