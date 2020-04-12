@@ -28,7 +28,6 @@ body,
 }
 
 .container .name-content {
-  /* display: inline-block; */
   max-width: 100%;
   margin: 0 0 0 1em;
 }
@@ -37,42 +36,51 @@ body,
   margin-right: 50px;
 }
 
+.close-btn {
+  font-size: 40px;
+  padding-right: 10px;
+  color: #000;
+  margin-top: -13px;
+  margin-left: -21px;
+}
+
+.close-btn:hover {
+  color: #757575;
+}
+
 /* NAME */
 
 .full-name {
-  animation: name 3s steps(20, end),
-    blink-caret .75s step-end infinite;
+  animation: name 3s steps(12),
+    blink-caret 1s steps(1) infinite;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 4px solid #757575;
+  border-right: 25px solid rgba(0, 0, 0, 0.3);
   color: #000;
   line-height: 1.5;
   margin: 0 0 1rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  padding-left: 6px;
+  padding-left: 46px;
   font-size: 70px;
+  width: fit-content;
+  font-weight: normal;
 }
 
 @keyframes name {
   from {
-    width: 0
+    width: 0;
   }
 
   to {
-    width: 100%
+    width: 12ch;
   }
 }
 
 @keyframes blink-caret {
 
-  from,
-  to {
-    border-color: transparent
-  }
-
   50% {
-    border-color: #757575;
+    border-color: transparent
   }
 }
 
@@ -82,7 +90,7 @@ body,
   margin-top: -18px;
   padding-bottom: 8px;
   color: #757575;
-  text-align: center;
+  margin-left: 3em;
   text-transform: uppercase;
   letter-spacing: .2rem;
   font-size: 14px;
@@ -117,14 +125,24 @@ body,
 }
 
 .links:hover {
-  color: #000;
+  color: #757575;
 }
 
 /* ABOUT */
 
+.about-info {
+  margin-top: -3.6em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 .about-header {
+  font-weight: bold;
+  margin-top: 13px;
+  padding-bottom: 8px;
   text-transform: uppercase;
-  letter-spacing: .3rem;
+  letter-spacing: .2rem;
+  font-size: 27px;
 }
 
 .all-me {
@@ -184,10 +202,12 @@ viewer-pdf-toolbar {
 
 .contact-info {
   display: flex;
+  margin-top: -3.1em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .form-header {
-  font-size: 30px;
   font-weight: bold;
   margin-top: 5px;
   padding-bottom: 8px;
@@ -207,21 +227,21 @@ viewer-pdf-toolbar {
 #name,
 #email,
 #subject {
-  width: 27.4em;
+  width: 26em;
   height: 2em;
   font-size: .8rem;
   border: 1px solid #000;
 }
 
 #message {
-  width: 27.4em;
+  width: 26em;
   height: 6em;
   font-size: .8rem;
   border: 1px solid #000;
 }
 
 .send-btn {
-  width: 25.6em;
+  width: 24.2em;
   margin-top: 15px;
   height: 2em;
   font-size: 14px;
