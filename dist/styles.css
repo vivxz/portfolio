@@ -28,7 +28,7 @@ body,
 }
 
 .container .name-content {
-  display: inline-block;
+  /* display: inline-block; */
   max-width: 100%;
   margin: 0 0 0 1em;
 }
@@ -40,38 +40,52 @@ body,
 /* NAME */
 
 .full-name {
-  animation: name 3s steps(12);
+  animation: name 3s steps(20, end),
+    blink-caret .75s step-end infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 4px solid #757575;
-  width: 12ch;
   color: #000;
   line-height: 1.5;
-  margin: 0 0 -1rem;
+  margin: 0 0 1rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: .2rem;
   padding-left: 6px;
   font-size: 70px;
 }
 
 @keyframes name {
-  0% {
-    width: 0ch;
+  from {
+    width: 0
   }
 
-  100% {
-    width: 13ch;
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #757575;
   }
 }
 
 /* TITLES */
 
 .titles {
+  margin-top: -18px;
   padding-bottom: 8px;
   color: #757575;
-  letter-spacing: 0em;
-  margin-left: 65px;
-  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 14px;
 }
 
 /* NAV */
@@ -83,19 +97,23 @@ body,
   border: solid 1px #000;
   border-radius: 4px;
   margin-left: 20px;
-  width: 25em;
+  width: 26em;
+}
+
+.nav {
+  margin: 30px 0 0 30px;
 }
 
 .links {
-  margin: 10px;
-  padding-left: 15px;
-  display: inline;
-  flex-direction: row;
+  display: block;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  padding: 0 1rem 0 1.45rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: .8rem;
   text-decoration: none;
-  color: #757575;
-  cursor: pointer;
-  padding-right: 0.5em;
-  letter-spacing: .1rem;
+  color: #000;
 }
 
 .links:hover {
@@ -104,11 +122,25 @@ body,
 
 /* ABOUT */
 
+.about-header {
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+.all-me {
+  width: 100%;
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.about-intro {
+  margin: 30px;
+}
+
 .profile-picture {
   border-radius: 5%;
-  width: 48%;
-  height: 16em;
-  margin: -21px 0 0em 6em;
+  width: 34%;
+  height: 20em;
 }
 
 .stack-type {
@@ -116,14 +148,16 @@ body,
 }
 
 .stack-name {
-  font-size: 18px;
   margin-bottom: 2px;
+  color: #757575;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-size: 0.9rem;
 }
 
 .stack {
-  font-size: 40px;
-  margin: 0 0 0 16px;
-  padding-right: 20px;
+  font-size: 2rem;
+  margin: 0 0 0 1em;
   width: 100%;
 }
 
@@ -136,4 +170,97 @@ body,
 .resume {
   width: 100%;
   height: 430px;
+}
+
+viewer-pdf-toolbar {
+  z-index: none;
+}
+
+/* CONTACT */
+
+.contact-container {
+  height: 350px;
+}
+
+.contact-info {
+  display: flex;
+}
+
+.form-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 27px;
+}
+
+.form-labels {
+  display: grid;
+  color: #757575;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-size: .8rem;
+}
+
+#name,
+#email,
+#subject {
+  width: 27.4em;
+  height: 2em;
+  font-size: .8rem;
+  border: 1px solid #000;
+}
+
+#message {
+  width: 27.4em;
+  height: 6em;
+  font-size: .8rem;
+  border: 1px solid #000;
+}
+
+.send-btn {
+  width: 25.6em;
+  margin-top: 15px;
+  height: 2em;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+.send-btn:hover {
+  color: #757575;
+  cursor: pointer;
+}
+
+.split {
+  border-left: 1px solid #757575;
+  height: 23rem;
+  margin: 20px;
+  margin-top: 0;
+}
+
+.reach-item {
+  display: flex;
+}
+
+.devicons {
+  font-size: 30px;
+  padding-right: 10px;
+  text-align: center;
+  color: #757575;
+  margin: 20px 0 20px 0;
+}
+
+.reach-info {
+  margin: 27px 0 0 0;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: .7rem;
+  font-weight: bold;
 }
