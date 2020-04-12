@@ -2,17 +2,16 @@ import React from 'react';
 import { Dialog } from "@reach/dialog";
 import stacks from '../data/stacks.js';
 import Skills from './Skills';
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const About = ({ showDialog, navAbout, close }) => {
   return (
     <>
       {navAbout ? (
         <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
-          <button className="close-button" onClick={close}>
-            CLOSE
-            </button>
+          <MdKeyboardArrowLeft onClick={close} className="close-btn"/>
           <div className="about-info">
-            <h3 className="about-header">About Me</h3>
+            <div className="about-header">About Me</div>
             <div className="all-me">
               <img className="profile-picture" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pp.png" alt="avatar" />
               <div className="about-intro">
@@ -35,7 +34,7 @@ const About = ({ showDialog, navAbout, close }) => {
               </div>
             </div>
             <hr />
-            <h3 className="about-header">Technical Skills</h3>
+            <div className="about-header">Technical Skills</div>
             <div className="techskills">
               <div className="stack-name">Front End:</div>
               <div className="stack-type">

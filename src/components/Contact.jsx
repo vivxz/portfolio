@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dialog } from "@reach/dialog";
-import { MdMailOutline } from "react-icons/md";
+import { MdMailOutline, MdKeyboardArrowLeft } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
 
@@ -9,9 +9,7 @@ const Contact = ({ navContact, showDialog, close }) => {
     <>
       {navContact ? (
         <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="contact" className="contacts">
-          <button className="close-button" onClick={close}>
-            CLOSE
-          </button>
+          <MdKeyboardArrowLeft onClick={close} className="close-btn"/>
           <div className="contact-container">
             <div className="contact-info">
               <div className="contact-form">

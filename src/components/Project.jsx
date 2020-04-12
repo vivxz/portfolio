@@ -1,14 +1,13 @@
 import React from 'react';
 import { Dialog } from "@reach/dialog";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const Project = ({ navApps, showDialog, close }) => {
   return (
     <>
       {navApps ? (
         <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
-          <button className="close-button" onClick={close}>
-            CLOSE
-        </button>
+          <MdKeyboardArrowLeft onClick={close} className="close-btn"/>
           <div className="apps-container">
             <div className="apps-sections">
               <h1>Applications</h1>
