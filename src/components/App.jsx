@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Router, navigate } from '@reach/router';
 import Home from './Home';
 import About from './About';
@@ -16,6 +16,11 @@ const App = () => {
   const open = () => setShowDialog(true);
   const roger = () => navigate('/dist') // GO HOME, ROGER!
 
+
+  useEffect(() => {
+
+  }, [])
+
   return (
     <React.StrictMode>
       <div className="container">
@@ -23,11 +28,10 @@ const App = () => {
           <Home />
         </header>
         <Router>
-          <Home path="/" exact />
           <About path="/about" navAbout={navAbout} close={roger} onClick={open} />
           <Resume path="/resume" navResume={navResume} close={roger} onClick={open} />
-          <Project path="/apps" navApps={navApps} close={roger} onClick={open}/>
-          <Contact path="/contact" navContact={navContact} close={roger} onClick={open}/>
+          <Project path="/apps" navApps={navApps} close={roger} onClick={open} />
+          <Contact path="/contact" navContact={navContact} close={roger} onClick={open} />
         </Router>
       </div >
     </React.StrictMode>

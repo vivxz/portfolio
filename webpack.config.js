@@ -1,42 +1,39 @@
 const path = require('path');
-const CompressionPlugin = require('compression-webpack-plugin');
-
-var SRC_DIR = path.join(__dirname, '/src');
-var DIST_DIR = path.join(__dirname, '/dist');
 
 module.exports = {
-  entry: `${SRC_DIR}/index.js`,
+  entry: './src/index.js',
   output: {
-    path: DIST_DIR,
     filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [
       {
-        loader: 'babel-loader',
         test: /\.js[x]?/,
         exclude: /node_modules/,
-        options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ["@babel/plugin-proposal-class-properties"]
-        },
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react']
+          }
+        }
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       }
-    ],
+    ]
   },
-  plugins: [
-    new CompressionPlugin({
-      filename: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.(js|css|html|svg)$/,
-      threshold: 8192,
-      minRatio: 0.8
-    })
-  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
+  },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   }
 };
