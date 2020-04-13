@@ -91,7 +91,74 @@ const stacks = {
       'bw': 'devicon-babel-plain',
       'color': 'devicon-babel-plain colored'
     }
+  ],
+  'fec': [
+    {
+      'name': 'MongoDB'
+    },
+    {
+      'name': 'Mongoose'
+    },
+    {
+      'name': 'Node.js'
+    },
+    {
+      'name': 'Express'
+    },
+    {
+      'name': 'React'
+    },
+    {
+      'name': 'AWS S3'
+    }
+  ],
+  'sdc': [
+    {
+      'name': 'PostgreSQL'
+    },
+    {
+      'name': 'Express'
+    },
+    {
+      'name': 'Node.js'
+    },
+    {
+      'name': 'New Relic'
+    },
+    {
+      'name': 'AWS EC2'
+    },
+    {
+      'name': 'Artillery.io'
+    },
+    {
+      'name': 'Loader.io'
+    },
+    {
+      'name': 'Nginx'
+    }
+  ],
+  'mvp': [
+    {
+      'name': 'MongoDB'
+    },
+    {
+      'name': 'Mongoose'
+    },
+    {
+      'name': 'Node.js'
+    },
+    {
+      'name': 'Express'
+    },
+    {
+      'name': 'React'
+    },
+    {
+      'name': 'AWS EC2'
+    }
   ]
+
 }
 
 export default stacks;

@@ -51,8 +51,7 @@ body,
 /* NAME */
 
 .full-name {
-  animation: name 3s steps(12),
-    blink-caret 1s steps(1) infinite;
+  animation: blink-caret .75s step-end infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 25px solid rgba(0, 0, 0, 0.3);
@@ -67,20 +66,15 @@ body,
   font-weight: normal;
 }
 
-@keyframes name {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 12ch;
-  }
-}
-
 @keyframes blink-caret {
 
+  from,
+  to {
+    border-color: transparent;
+  }
+
   50% {
-    border-color: transparent
+    border-color: #757575;
   }
 }
 
@@ -283,4 +277,49 @@ viewer-pdf-toolbar {
   letter-spacing: .2rem;
   font-size: .7rem;
   font-weight: bold;
+}
+
+/* APPS */
+
+.apps-container {
+  display: block;
+  margin-top: -3.1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.apps-header {
+  font-weight: bold;
+  margin-top: 4px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 27px;
+}
+
+.app-title {
+  font-weight: bold;
+  margin-top: 13px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 25px;
+}
+
+.techstack-name {
+  color: #757575;
+}
+
+.techstack {
+  margin-top: -1rem;
+  margin-left: 1rem;
+}
+
+.app-letters {
+  color: #757575;
+}
+
+.app-img,
+.app-video {
+  width: 36rem;
 }
