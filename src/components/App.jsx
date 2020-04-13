@@ -24,10 +24,8 @@ const App = () => {
   return (
     <React.StrictMode>
       <div className="container">
-        <header>
-          <Home />
-        </header>
         <Router>
+          <Home path="/" exact />
           <About path="/about" navAbout={navAbout} close={roger} onClick={open} />
           <Resume path="/resume" navResume={navResume} close={roger} onClick={open} />
           <Project path="/apps" navApps={navApps} close={roger} onClick={open} />
