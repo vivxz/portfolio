@@ -1,67 +1,258 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dialog } from "@reach/dialog";
+import stacks from '../data/stacks.js';
+import StackList from './StackList';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const Project = ({ navApps, showDialog, close }) => {
+  const [allApps, setAllApps] = useState(true);
+  const [frontEnd, setFrontEnd] = useState(false);
+  const [backEnd, setBackEnd] = useState(false);
+  const [fullStack, setFullStack] = useState(false);
+
+  const all = () => {
+    setFrontEnd(false);
+    setBackEnd(false);
+    setFullStack(false);
+    setAllApps(true);
+  };
+
+  const front = () => {
+    setAllApps(false);
+    setBackEnd(false);
+    setFullStack(false);
+    setFrontEnd(true)
+  };
+
+  const back = () => {
+    setAllApps(false)
+    setFrontEnd(false);
+    setFullStack(false);
+    setBackEnd(true)
+  };
+
+  const full = () => {
+    setAllApps(false);
+    setFrontEnd(false);
+    setBackEnd(false);
+    setFullStack(true);
+  }
+
+  useEffect(() => {
+    console.error;
+  }, [allApps, frontEnd, backEnd, fullStack]);
+
   return (
-    <>
-      {navApps ? (
-        <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
-          <MdKeyboardArrowLeft onClick={close} className="close-btn"/>
-          <div className="apps-container">
-            <div className="apps-sections">
-              <h1>Applications</h1>
-            </div>
-            <div className="apps-sections fe">
-              <h2>LalaLime - Front End</h2>
-              <div className="techstack">
-                <p>MongoDB | Mongoose | Node.js | Express | React | Heroku</p>
-                <div className="appreview">
-                  <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/demo.gif" alt="LalaLime" className="app-img" />
-                </div>
-                <div className="app-description">
-                  <p>EXPLAIN APPLICATION HERE</p>
-                  <li>Created and deployed a <strong>microservice</strong> of the navigation bar that allows users to browse through the webpage through the use of conditional rendering to simulate an actual product that mimics LuluLemon’s search functionality</li>
-                  <li>Implemented a proxy sever without using middleware to render all microservices in a <strong>service orientated architecture</strong> format </li>
-                  <li>Minified bundle from <strong>3MB</strong> to <strong>172KB</strong> which generated a score of <strong>98</strong> on lighthouse to measure web performance</li>
+    <div>
+      {navApps && frontEnd ?
+        (
+          <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
+            <MdKeyboardArrowLeft onClick={close} className="close-btn" />
+            <div className="apps-container">
+              <div className="apps-sections">
+                <div className="apps-header">Applications</div>
+              </div>
+              <div className="app-btn-container">
+                <button className="app-btn" onClick={all}>All</button>
+                <button className="app-btn" onClick={front}>Front End</button>
+                <button className="app-btn" onClick={back}>Back End</button>
+                <button className="app-btn" onClick={full}>Full Stack</button>
+              </div>
+              <div className="apps-sections fe">
+                <div className="app-title">LalaLime</div>
+                <div className="techstack">
+
+                  <p>
+                    {stacks.fec.map((stack, i) => {
+                      return (
+                        <StackList stack={stack} key={i} index={i} last={stacks.fec.length - 1} />
+                      )
+                    })}
+                  </p>
+
+                  <div className="appreview">
+                    <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/demo.gif" alt="LalaLime" className="app-img" />
+                  </div>
+                  <div className="app-description">
+                    <p>EXPLAIN APPLICATION HERE</p>
+                    <li>Created and deployed a <span className="app-letters">microservice</span> of the navigation bar that allows users to browse through the webpage through the use of conditional rendering to simulate an actual product that mimics LuluLemon’s search functionality</li>
+                    <li>Implemented a proxy sever without using middleware to render all microservices in a <span className="app-letters">service orientated architecture</span> format </li>
+                    <li>Minified bundle from <span className="app-letters">3MB</span> to <span className="app-letters">172KB</span> which generated a score of <span className="app-letters">98</span> on lighthouse to measure web performance</li>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="apps-sections be">
-              <h2>Anthropologie Clone - Back End</h2>
-              <div className="techstack">
-                <p>PostgreSQL | Express | Node.js | New Relic | AWS EC2 | Artillery.io | loader.io | Nginx</p>
-                <div className="appreview">
-                  PREVIEW HERE!!!
+          </Dialog>
+        )
+        : navApps && backEnd ?
+          (
+            <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
+              <MdKeyboardArrowLeft onClick={close} className="close-btn" />
+              <div className="apps-container">
+                <div className="apps-sections">
+                  <div className="apps-header">Applications</div>
                 </div>
-                <div className="app-description">
-                  <p>EXPLAIN APPLICATION HERE</p>
-                  <li>Created and utilized a script to generate <strong>10M</strong> mock records to populate both SQL and noSQL databases to emulate a realistic testing scenario </li>
-                  <li>Compared both DBMS by stress testing and reduced query times by using <strong>single-field index</strong> resulting in a shortened average latency of  <strong>~4ms</strong> from <strong>~17ms</strong></li>
-                  <li>Deployed and horizontally scaled 3 instances to handle <strong>2,750 RPS</strong> with <strong>0.0% error rate</strong> and <strong>67ms average response time</strong> using <strong>round robin</strong> load balancing algorithm</li>
+                <div className="app-btn-container">
+                  <button className="app-btn" onClick={all}>All</button>
+                  <button className="app-btn" onClick={front}>Front End</button>
+                  <button className="app-btn" onClick={back}>Back End</button>
+                  <button className="app-btn" onClick={full}>Full Stack</button>
+                </div>
+                <div className="apps-sections be">
+                  <div className="app-title">Anthropologie Clone</div>
+                  <div className="techstack">
+
+                    <p>
+                      {stacks.sdc.map((stack, i) => {
+                        return (
+                          <StackList stack={stack} key={i} index={i} last={stacks.sdc.length - 1} />
+                        )
+                      })}
+                    </p>
+
+                    <div className="appreview">
+                      PREVIEW HERE!!!
+                        </div>
+                    <div className="app-description">
+                      <p>EXPLAIN APPLICATION HERE</p>
+                      <li>Created and utilized a script to generate <span className="app-letters">10M</span> mock records to populate both SQL and noSQL databases to emulate a realistic testing scenario </li>
+                      <li>Compared both DBMS by stress testing and reduced query times by using <span className="app-letters">single-field index</span> resulting in a shortened average latency of  <span className="app-letters">~4ms</span> from <span className="app-letters">~17ms</span></li>
+                      <li>Deployed and horizontally scaled 3 instances to handle <span className="app-letters">2,750 RPS</span> with <span className="app-letters">0.0% error rate</span> and <span className="app-letters">67ms average response time</span> using <span className="app-letters">round robin</span> load balancing algorithm</li>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="apps-sections fs">
-              <h2>PAVÉ - Full-Stack</h2>
-              <div className="techstack">
-                <p>MongoDB | Mongoose | Node.js | Express | React | AWS EC2</p>
-                <div className="appreview">
-                  <video muted src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pave.mp4" alt="PAVÉ" className="app-video" />
+            </Dialog>
+          ) : navApps && fullStack ?
+            (
+              <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
+                <MdKeyboardArrowLeft onClick={close} className="close-btn" />
+                <div className="apps-container">
+                  <div className="apps-sections">
+                    <div className="apps-header">Applications</div>
+                  </div>
+                  <div className="app-btn-container">
+                    <button className="app-btn" onClick={all}>All</button>
+                    <button className="app-btn" onClick={front}>Front End</button>
+                    <button className="app-btn" onClick={back}>Back End</button>
+                    <button className="app-btn" onClick={full}>Full Stack</button>
+                  </div>
+                  <div className="apps-sections fs">
+                    <div className="app-title">PAVÉ</div>
+                    <div className="techstack">
+
+                      <p>
+                        {stacks.mvp.map((stack, i) => {
+                          return (
+                            <StackList stack={stack} key={i} index={i} last={stacks.mvp.length - 1} />
+                          )
+                        })}
+                      </p>
+
+                      <div className="appreview">
+                        <video muted src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pave.mp4" alt="PAVÉ" className="app-video" autoPlay loop />
+                      </div>
+                      <div className="app-description">
+                        <p>EXPLAIN APPLICATION HERE</p>
+                        <li>Incorporated a <span className="app-letters">monolithic design architecture</span> and <span className="app-letters">agile methodology</span> to develop and deploy a responsive mobile-first web application that combined aspects of food, drinks, and social media</li>
+                        <li>Integrated <span className="app-letters">Facebook authentication API</span> to provide users an efficient sign-up and/or login interface</li>
+                        <li>Utilized <span className="app-letters">Yelp</span> and <span className="app-letters">Google Maps API</span> to integrate restaurant information based on location and category</li>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="app-description">
-                  <p>EXPLAIN APPLICATION HERE</p>
-                  <li>Incorporated a <strong>monolithic design architecture</strong> and <strong>agile methodology</strong> to develop and deploy a responsive mobile-first web application that combined aspects of food, drinks, and social media</li>
-                  <li>Integrated <strong>Facebook authentication API</strong> to provide users an efficient sign-up and/or login interface</li>
-                  <li>Utilized <strong>Yelp</strong> and <strong>Google Maps API</strong> to integrate restaurant information based on location and category</li>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Dialog>
-      ) : null
+              </Dialog>
+            ) : navApps && allApps ?
+              (
+                <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
+                  <MdKeyboardArrowLeft onClick={close} className="close-btn" />
+                  <div className="apps-container">
+                    <div className="apps-sections">
+                      <div className="apps-header">Applications</div>
+                      <div className="app-btn-container">
+                        <button className="app-btn" onClick={all}>All</button>
+                        <button className="app-btn" onClick={front}>Front End</button>
+                        <button className="app-btn" onClick={back}>Back End</button>
+                        <button className="app-btn" onClick={full}>Full Stack</button>
+                      </div>
+                    </div>
+                    <div className="apps-sections fe">
+                      <div className="app-title">LalaLime</div>
+                      <div className="techstack">
+
+                        <p>
+                          {stacks.fec.map((stack, i) => {
+                            return (
+                              <StackList stack={stack} key={i} index={i} last={stacks.fec.length - 1} />
+                            )
+                          })}
+                        </p>
+
+                        <div className="appreview">
+                          <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/demo.gif" alt="LalaLime" className="app-img" />
+                        </div>
+                        <div className="app-description">
+                          <p>EXPLAIN APPLICATION HERE</p>
+                          <li>Created and deployed a <span className="app-letters">microservice</span> of the navigation bar that allows users to browse through the webpage through the use of conditional rendering to simulate an actual product that mimics LuluLemon’s search functionality</li>
+                          <li>Implemented a proxy sever without using middleware to render all microservices in a <span className="app-letters">service orientated architecture</span> format </li>
+                          <li>Minified bundle from <span className="app-letters">3MB</span> to <span className="app-letters">172KB</span> which generated a score of <span className="app-letters">98</span> on lighthouse to measure web performance</li>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="apps-sections be">
+                      <div className="app-title">Anthropologie Clone</div>
+                      <div className="techstack">
+
+                        <p>
+                          {stacks.sdc.map((stack, i) => {
+                            return (
+                              <StackList stack={stack} key={i} index={i} last={stacks.sdc.length - 1} />
+                            )
+                          })}
+                        </p>
+
+                        <div className="appreview">
+                          PREVIEW HERE!!!
+                        </div>
+                        <div className="app-description">
+                          <p>EXPLAIN APPLICATION HERE</p>
+                          <li>Created and utilized a script to generate <span className="app-letters">10M</span> mock records to populate both SQL and noSQL databases to emulate a realistic testing scenario </li>
+                          <li>Compared both DBMS by stress testing and reduced query times by using <span className="app-letters">single-field index</span> resulting in a shortened average latency of  <span className="app-letters">~4ms</span> from <span className="app-letters">~17ms</span></li>
+                          <li>Deployed and horizontally scaled 3 instances to handle <span className="app-letters">2,750 RPS</span> with <span className="app-letters">0.0% error rate</span> and <span className="app-letters">67ms average response time</span> using <span className="app-letters">round robin</span> load balancing algorithm</li>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="apps-sections fs">
+                      <div className="app-title">PAVÉ</div>
+                      <div className="techstack">
+
+                        <p>
+                          {stacks.mvp.map((stack, i) => {
+                            return (
+                              <StackList stack={stack} key={i} index={i} last={stacks.mvp.length - 1} />
+                            )
+                          })}
+                        </p>
+
+                        <div className="appreview">
+                          <video muted src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pave.mp4" alt="PAVÉ" className="app-video" autoPlay loop />
+                        </div>
+                        <div className="app-description">
+                          <p>EXPLAIN APPLICATION HERE</p>
+                          <li>Incorporated a <span className="app-letters">monolithic design architecture</span> and <span className="app-letters">agile methodology</span> to develop and deploy a responsive mobile-first web application that combined aspects of food, drinks, and social media</li>
+                          <li>Integrated <span className="app-letters">Facebook authentication API</span> to provide users an efficient sign-up and/or login interface</li>
+                          <li>Utilized <span className="app-letters">Yelp</span> and <span className="app-letters">Google Maps API</span> to integrate restaurant information based on location and category</li>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Dialog>
+              )
+              : null
       }
-    </>
+    </div >
   )
 }
 

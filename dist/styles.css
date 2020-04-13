@@ -245,7 +245,8 @@ viewer-pdf-toolbar {
   letter-spacing: .3rem;
 }
 
-.send-btn:hover {
+.send-btn:hover,
+.app-btn:hover {
   color: #757575;
   cursor: pointer;
 }
@@ -322,4 +323,20 @@ viewer-pdf-toolbar {
 .app-img,
 .app-video {
   width: 36rem;
+}
+
+.app-btn-container {
+  margin-right: 2px;
+}
+
+.app-btn {
+  width: 11em;
+  margin-top: 15px;
+  height: 2em;
+  font-size: 13px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  margin-right: 7px;
 }
