@@ -44,9 +44,6 @@ body,
   margin-left: -21px;
 }
 
-.close-btn:hover {
-  color: #757575;
-}
 
 /* NAME */
 
@@ -120,6 +117,7 @@ body,
 
 .links:hover {
   color: #757575;
+  font-weight: bold;
 }
 
 /* ABOUT */
@@ -246,7 +244,8 @@ viewer-pdf-toolbar {
 }
 
 .send-btn:hover,
-.app-btn:hover {
+.app-btn:hover,
+.close-btn:hover {
   color: #757575;
   cursor: pointer;
 }
@@ -331,7 +330,7 @@ viewer-pdf-toolbar {
 
 .app-btn {
   width: 11em;
-  margin-top: 15px;
+  margin-top: 5px;
   height: 2em;
   font-size: 13px;
   border: 1px solid #000;

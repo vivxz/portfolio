@@ -111,8 +111,8 @@ const Project = ({ navApps, showDialog, close }) => {
                     </p>
 
                     <div className="appreview">
-                      PREVIEW HERE!!!
-                        </div>
+                      <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/anthro.png" alt="Anthro" className="app-img" />
+                    </div>
                     <div className="app-description">
                       <p>EXPLAIN APPLICATION HERE</p>
                       <li>Created and utilized a script to generate <span className="app-letters">10M</span> mock records to populate both SQL and noSQL databases to emulate a realistic testing scenario </li>
@@ -213,7 +213,7 @@ const Project = ({ navApps, showDialog, close }) => {
                         </p>
 
                         <div className="appreview">
-                          PREVIEW HERE!!!
+                          <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/anthro.png" alt="Anthro" className="app-img" />
                         </div>
                         <div className="app-description">
                           <p>EXPLAIN APPLICATION HERE</p>
