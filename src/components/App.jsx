@@ -14,7 +14,7 @@ const App = () => {
   const [showDialog, setShowDialog] = useState(false);
 
   const open = () => setShowDialog(true);
-  const roger = () => navigate('/dist') // GO HOME, ROGER!
+  const roger = () => navigate('/') // GO HOME, ROGER!
 
 
   useEffect(() => {
