@@ -179,15 +179,34 @@ body,
   height: 42px;
 }
 
+.about-devicons {
+  font-size: 21px;
+  padding-right: 10px;
+  text-align: center;
+  margin: 20px 0 20px 0;
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+}
+
+.about-devicons:hover {
+  color: #757575
+}
+
+.about-links {
+  margin: -2em 0;
+  text-align: center;
+}
+
+.about-desc {
+  margin: -1em 0;
+}
+
 /* RESUME */
 
 .resume {
   width: 100%;
   height: 430px;
-}
-
-viewer-pdf-toolbar {
-  z-index: none;
 }
 
 /* CONTACT */
@@ -230,8 +249,10 @@ viewer-pdf-toolbar {
 }
 
 #message {
-  width: 26em;
-  height: 6em;
+  max-width: 26em;
+  min-width: 26em;
+  max-height: 6em;
+  min-height: 6em;
   font-size: .8rem;
   border: 1px solid #000;
 }
@@ -342,4 +363,23 @@ viewer-pdf-toolbar {
   text-transform: uppercase;
   letter-spacing: .3rem;
   margin-right: 7px;
+}
+
+.repo-btn {
+  width: 13em;
+  height: 2em;
+  color: #000;
+  font-size: 9px;
+  border: 0.5px solid #757575;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  margin-right: 17px;
+  float: right;
+}
+
+.repo-btn:hover {
+  background-color: #fff;
+  cursor: pointer;
+  color: #757575
 }

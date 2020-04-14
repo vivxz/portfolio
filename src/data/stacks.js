@@ -59,8 +59,8 @@ const stacks = {
     },
     {
       'name': 'Sequelize',
-      'bw': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/sequelize+1.svg',
-      'color': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/sequelize2.svg'
+      'bw': 'devicon-sequelize-plain',
+      'color': 'devicon-sequelize-plain-wordmark colored'
     }
   ],
   'testing': [

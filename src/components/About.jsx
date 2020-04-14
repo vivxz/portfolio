@@ -5,6 +5,7 @@ import Skills from './Skills';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
+import { FiFileText } from "react-icons/fi";
 
 const About = ({ showDialog, navAbout, close }) => {
   return (
@@ -17,24 +18,29 @@ const About = ({ showDialog, navAbout, close }) => {
             <div className="all-me">
               <img className="profile-picture" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pp.png" alt="avatar" />
               <div className="about-intro">
-                <FaLinkedinIn />
-                <GoMarkGithub />
-                <p>
-                  A meticulous, creative, and passionate
-                  software engineer with a strong interest in
-                  projects that require both conceptual and
-                  analytical thinking. Fully-committed to
-                  designing and developing innovative
-                  applications that users will love. Always
-                  eager to learn more from anyone or
-                  anything.
+                <div className="about-links">
+                  <a target="_blank" href='https://www.linkedin.com/in/vivian-quan/'><FaLinkedinIn className="about-devicons" /></a>
+                  <a target="_blank" href='https://github.com/vivxz'><GoMarkGithub className="about-devicons" /></a>
+                  <a target="_blank" href='https://bit.ly/39ieym9'><FiFileText className="about-devicons" /></a>
+                </div>
+                <div className="about-desc">
+                  <p>
+                    A meticulous, creative, and passionate
+                    software engineer with a strong interest in
+                    projects that require both conceptual and
+                    analytical thinking. Fully-committed to
+                    designing and developing innovative
+                    applications that users will love. Always
+                    eager to learn more from anyone or
+                    anything.
               </p>
-                <p>
-                  I would love to join a team/company that
-                  will allow me to leverage my skills,
-                  encourage my passions, and continue to
-                  challenge me as I grow in this field or in life.
+                  <p>
+                    I would love to join a team/company that
+                    will allow me to leverage my skills,
+                    encourage my passions, and continue to
+                    challenge me as I grow in this field or in life.
               </p>
+                </div>
               </div>
             </div>
             <hr />
