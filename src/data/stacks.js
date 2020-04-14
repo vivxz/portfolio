@@ -56,6 +56,11 @@ const stacks = {
       'name': 'NGINX',
       'bw': 'devicon-nginx-plain',
       'color': 'devicon-nginx-plain colored'
+    },
+    {
+      'name': 'Sequelize',
+      'bw': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/sequelize+1.svg',
+      'color': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/sequelize2.svg'
     }
   ],
   'testing': [
@@ -90,6 +95,16 @@ const stacks = {
       'name': 'Babel',
       'bw': 'devicon-babel-plain',
       'color': 'devicon-babel-plain colored'
+    },
+    {
+      'name': 'Yarn',
+      'bw': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/yarn+1.svg',
+      'color': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/yarn2.svg'
+    },
+    {
+      'name': 'npm',
+      'bw': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/npm2.svg',
+      'color': 'https://vivs-portfolio.s3-us-west-1.amazonaws.com/npm.svg'
     }
   ],
   'fec': [
@@ -158,7 +173,6 @@ const stacks = {
       'name': 'AWS EC2'
     }
   ]
-
 }
 
 export default stacks;

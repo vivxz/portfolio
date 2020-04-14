@@ -1,14 +1,30 @@
 import React, { useState } from "react";
 
 const Skills = (props) => {
-  const [hoovered, setHoovered] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [firstLetter] = useState('d')
 
   const handleMouseHover = () => toggle();
-  const toggle = () => setHoovered(!hoovered);
+  const toggle = () => setHovered(!hovered);
+
+  const renderDevIcon = () => {
+    if (hovered) {
+      return <i className={props.stack.color} />
+    } else {
+      return <i className={props.stack.bw} />
+    }
+  }
+  const renderSVGIcon = () => {
+    if (hovered) {
+      return <img className="svg-icon" src={props.stack.color} />
+    } else {
+      return <img className="svg-icon" src={props.stack.bw} />
+    }
+  }
 
   return (
     <p className='stack' onMouseEnter={handleMouseHover}>
-      {hoovered ? <i className={props.stack.color} /> : <i className={props.stack.bw} />}
+      {firstLetter === props.stack.color[0] ? renderDevIcon() : renderSVGIcon()}
     </p>
   )
 }

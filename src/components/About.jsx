@@ -3,18 +3,22 @@ import { Dialog } from "@reach/dialog";
 import stacks from '../data/stacks.js';
 import Skills from './Skills';
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa";
+import { GoMarkGithub } from "react-icons/go";
 
 const About = ({ showDialog, navAbout, close }) => {
   return (
     <>
       {navAbout ? (
         <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
-          <MdKeyboardArrowLeft onClick={close} className="close-btn"/>
+          <MdKeyboardArrowLeft onClick={close} className="close-btn" />
           <div className="about-info">
             <div className="about-header">About Me</div>
             <div className="all-me">
               <img className="profile-picture" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pp.png" alt="avatar" />
               <div className="about-intro">
+                <FaLinkedinIn />
+                <GoMarkGithub />
                 <p>
                   A meticulous, creative, and passionate
                   software engineer with a strong interest in
