@@ -44,7 +44,7 @@ const Contact = ({ navContact, showDialog, close }) => {
               </div>
               <div className="split"></div>
               <div className="reach-me">
-                <div className="form-header">Get in touch</div>
+                <div className="form-header reach-header">Get in touch</div>
                 <div className="reach-item">
                   <MdMailOutline className="devicons" />
                   <span className="reach-info">viviannquan@gmail.com </span>

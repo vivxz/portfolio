@@ -10,7 +10,8 @@ const Resume = ({ showDialog, navResume, close }) => {
         <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="about-info">
           <MdKeyboardArrowLeft onClick={close} className="close-btn" />
           <div className="resume-container">
-            <object className="resume" data="https://vivs-portfolio.s3-us-west-1.amazonaws.com/resume.pdf" type="application/pdf" />
+            <div className="resume-header">Resume</div>
+            <iframe className="resume" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/resume.pdf" />
           </div>
         </Dialog>
       ) : null

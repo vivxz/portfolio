@@ -107,7 +107,7 @@ body,
   display: block;
   height: 2.75rem;
   line-height: 2.75rem;
-  padding: 0 1rem 0 1.45rem;
+  padding: 0 1rem 0 1.5rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
   font-size: .8rem;
@@ -116,8 +116,8 @@ body,
 }
 
 .links:hover {
-  color: #757575;
-  font-weight: bold;
+  background-color: #757575;
+  color: #fff;
 }
 
 /* ABOUT */
@@ -155,6 +155,7 @@ body,
 
 .stack-type {
   width: 100%;
+  display: flex;
 }
 
 .stack-name {
@@ -169,10 +170,6 @@ body,
   font-size: 2rem;
   margin: 0 2em 0 0;
   cursor: pointer;
-}
-
-.stack-type {
-  display: flex;
 }
 
 .svg-icon {
@@ -207,6 +204,16 @@ body,
 .resume {
   width: 100%;
   height: 430px;
+}
+
+.resume-header {
+  font-weight: bold;
+  margin-top: -1.7em;
+  padding-left: 0.5em;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 27px
 }
 
 /* CONTACT */
@@ -382,4 +389,144 @@ body,
   background-color: #fff;
   cursor: pointer;
   color: #757575
+}
+
+.hr-spacing {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 500px) and (-webkit-min-device-pixel-ratio: 1) {
+  .full-name {
+    padding-left: 90px;
+    font-size: 52px;
+  }
+
+  .titles {
+    margin-left: 7em;
+    font-size: 11px;
+  }
+
+  .container .name-content {
+    margin: 0;
+  }
+
+  .navbar {
+    margin-left: 2em;
+  }
+
+  .container .nav {
+    width: 21em;
+  }
+
+  .links {
+    font-size: .6rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .all-me {
+    display: block;
+  }
+
+  .profile-picture {
+    width: 90%;
+    height: 14em;
+  }
+
+  .about-intro {
+    margin: 30px 0 0 0;
+  }
+
+  .stack-type {
+    overflow: overlay;
+  }
+
+  .resume {
+    height: 350px;
+  }
+
+  .app-btn {
+    background-color: #fff;
+  }
+
+  .app-title {
+    font-size: 20px;
+    display: grid;
+  }
+
+  .repo-btn {
+    float: left;
+    font-size: 8px;
+  }
+
+  .techstack {
+    float: left;
+    font-size: 14px;
+  }
+
+  .appreview {
+    margin-left: -2.6em;
+  }
+
+  .app-img,
+  .app-video {
+    width: 15rem;
+  }
+
+  #name,
+  #email,
+  #subject {
+    width: 14em;
+
+  }
+
+  #message {
+    max-width: 14em;
+    min-width: 14em;
+  }
+
+  .send-btn {
+    width: 13.2em;
+  }
+
+  .contact-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-info {
+    display: block;
+  }
+
+  .split {
+    border-left: none;
+    border-bottom: 1px solid #757575;
+    margin: 0 0 0 -2em;
+    height: 20px;
+    width: 14em;
+  }
+
+  .reach-header,
+  .reach-item,
+  .send-btn,
+  .form-item,
+  .techstack,
+  .app-title {
+    margin-left: -1em;
+  }
+
+  .form-header {
+    font-size: 24px;
+  }
+
+  .reach-info {
+    font-size: 0.6em;
+    margin: 20px 0 0 0;
+  }
+
+  .devicons {
+    font-size: 25px;
+    margin: 12px 0 12px -12px;
+  }
+
 }
