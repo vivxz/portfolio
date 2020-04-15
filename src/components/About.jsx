@@ -16,7 +16,7 @@ const About = ({ showDialog, navAbout, close }) => {
           <div className="about-info">
             <div className="about-header">About Me</div>
             <div className="all-me">
-              <img className="profile-picture" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/pp.png" alt="avatar" />
+              <img className="profile-picture" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/profile.png" alt="avatar" />
               <div className="about-intro">
                 <div className="about-links">
                   <a target="_blank" href='https://www.linkedin.com/in/vivian-quan/'><FaLinkedinIn className="about-devicons" /></a>
