@@ -468,7 +468,7 @@ body,
   .repo-btn {
     float: left;
     font-size: 6px;
-    width: 90px;
+    width: 30%;
     margin-top: 5px;
 
   }
@@ -486,6 +486,17 @@ body,
 
   .contact-info {
     display: block;
+  }
+
+  #name,
+  #email,
+  #subject,
+  #message {
+    width: 100%;
+  }
+
+  .send-btn {
+    width: 102%;
   }
 
   .split {
@@ -522,9 +533,27 @@ body,
 }
 
 @media only screen and (min-width: 601px) and (max-width: 950px) and (-webkit-min-device-pixel-ratio: 1) {
+  .profile-picture {
+    height: 21em;
+  }
+
+  .about-intro {
+    margin: 0 0 0 30px;
+  }
+
+  .stack {
+    margin: 0 20px 0 0;
+  }
+
+  .app-btn {
+    width: 100%;
+    font-size: 10px;
+  }
+
   .repo-btn {
     float: left;
     font-size: 8px;
+    width: 30%
   }
 
   .app-title {
@@ -538,6 +567,17 @@ body,
 
   .contact-info {
     display: block;
+  }
+
+  #name,
+  #email,
+  #subject,
+  #message {
+    width: 100%;
+  }
+
+  .send-btn {
+    width: 102%;
   }
 
   .split {
