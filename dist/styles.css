@@ -461,7 +461,6 @@ body,
   .app-btn {
     background-color: #fff;
     font-size: 9px;
-    width: 100%;
   }
 
   .app-title {
@@ -473,7 +472,6 @@ body,
     float: left;
     font-size: 6px;
     width: 30%;
-    height: 100%;
     margin-top: 5px;
 
   }
@@ -484,8 +482,8 @@ body,
   }
 
 
-  .contact-container {
-    width: 100%;
+  .contact-container,
+  .repo-btn {
     height: 100%;
   }
 
@@ -496,7 +494,11 @@ body,
   #name,
   #email,
   #subject,
-  #message {
+  #message,
+  .all-reach,
+  .reach-me,
+  .contact-container,
+  .app-btn {
     width: 100%;
   }
 
@@ -566,7 +568,6 @@ body,
   }
 
   .contact-container {
-    width: 100%;
     height: 100%;
   }
 
@@ -577,7 +578,10 @@ body,
   #name,
   #email,
   #subject,
-  #message {
+  #message,
+  .all-reach,
+  .reach-me,
+  .contact-container {
     width: 100%;
   }
 
@@ -590,8 +594,8 @@ body,
     height: 20px;
   }
 
-  .all-reach {
-    width: 100%;
+  .reach-item {
+    margin-left: 15px;
   }
 
   .contact-form {
@@ -604,7 +608,7 @@ body,
   }
 
   .reach-info {
-    font-size: 1.2em;
+    font-size: 22px;
     margin: 14px 0 0 0;
   }
 
