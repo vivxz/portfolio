@@ -34,6 +34,7 @@ body,
 
 .home-container {
   margin-right: 50px;
+  width: 100%;
 }
 
 .close-btn {
@@ -57,7 +58,7 @@ body,
   margin: 0 0 1rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  padding-left: 46px;
+  padding-left: 42px;
   font-size: 70px;
   width: fit-content;
   font-weight: normal;
@@ -222,6 +223,10 @@ body,
   height: 350px;
 }
 
+.contact-form {
+  width: 100%;
+}
+
 .contact-info {
   display: flex;
   margin-top: -3.1em;
@@ -249,15 +254,14 @@ body,
 #name,
 #email,
 #subject {
-  width: 26em;
+  width: 100%;
   height: 2em;
   font-size: .8rem;
   border: 1px solid #000;
 }
 
 #message {
-  max-width: 26em;
-  min-width: 26em;
+  width: 100%;
   max-height: 6em;
   min-height: 6em;
   font-size: .8rem;
@@ -265,7 +269,7 @@ body,
 }
 
 .send-btn {
-  width: 24.2em;
+  width: 100%;
   margin-top: 15px;
   height: 2em;
   font-size: 14px;
@@ -284,7 +288,7 @@ body,
 
 .split {
   border-left: 1px solid #757575;
-  height: 23rem;
+  height: 22em;
   margin: 20px;
   margin-top: 0;
 }
@@ -353,7 +357,7 @@ body,
 
 .app-img,
 .app-video {
-  width: 36rem;
+  width: 100%;
 }
 
 .app-btn-container {
@@ -396,7 +400,7 @@ body,
   margin-bottom: 1em;
 }
 
-@media only screen and (max-width: 500px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1) {
   .full-name {
     padding-left: 90px;
     font-size: 52px;
@@ -468,27 +472,6 @@ body,
     margin-left: -2.6em;
   }
 
-  .app-img,
-  .app-video {
-    width: 15rem;
-  }
-
-  #name,
-  #email,
-  #subject {
-    width: 14em;
-
-  }
-
-  #message {
-    max-width: 14em;
-    min-width: 14em;
-  }
-
-  .send-btn {
-    width: 13.2em;
-  }
-
   .contact-container {
     width: 100%;
     height: 100%;
@@ -529,4 +512,56 @@ body,
     margin: 12px 0 12px -12px;
   }
 
+}
+
+@media only screen and (min-width: 601px) and (max-width: 950px) and (-webkit-min-device-pixel-ratio: 1) {
+  .repo-btn {
+    float: left;
+    font-size: 8px;
+  }
+
+  .app-title {
+    display: grid;
+  }
+
+  .contact-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-info {
+    display: block;
+  }
+
+  .split {
+    border-left: none;
+    height: 20px;
+  }
+
+  .all-reach {
+    width: 100%;
+  }
+
+  .contact-form {
+    border-bottom: 1px solid #757575;
+    padding-bottom: 2em;
+  }
+
+  .send-btn {
+    width: 10
+  }
+
+  .form-header {
+    font-size: 24px;
+  }
+
+  .reach-info {
+    font-size: 1.2em;
+    margin: 14px 0 0 0;
+  }
+
+  .devicons {
+    font-size: 31px;
+    margin: 12px 0 12px -12px;
+  }
 }

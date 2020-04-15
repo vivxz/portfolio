@@ -9,7 +9,7 @@ const Contact = ({ navContact, showDialog, close }) => {
     <>
       {navContact ? (
         <Dialog isOpen={showDialog} onDismiss={close} aria-labelledby="contact" className="contacts">
-          <MdKeyboardArrowLeft onClick={close} className="close-btn"/>
+          <MdKeyboardArrowLeft onClick={close} className="close-btn" />
           <div className="contact-container">
             <div className="contact-info">
               <div className="contact-form">
@@ -45,17 +45,19 @@ const Contact = ({ navContact, showDialog, close }) => {
               <div className="split"></div>
               <div className="reach-me">
                 <div className="form-header reach-header">Get in touch</div>
-                <div className="reach-item">
-                  <MdMailOutline className="devicons" />
-                  <span className="reach-info">viviannquan@gmail.com </span>
-                </div>
-                <div className="reach-item">
-                  <FaLinkedinIn className="devicons" />
-                  <a href="https://www.linkedin.com/in/vivian-quan/" className="reach-info" target="_blank">vivian-quan</a>
-                </div>
-                <div className="reach-item">
-                  <GoMarkGithub className="devicons" />
-                  <a href="https://github.com/vivxz" className="reach-info" target="_blank">vivxz</a>
+                <div className="all-reach">
+                  <div className="reach-item">
+                    <MdMailOutline className="devicons" />
+                    <span className="reach-info">viviannquan@gmail.com </span>
+                  </div>
+                  <div className="reach-item">
+                    <FaLinkedinIn className="devicons" />
+                    <a href="https://www.linkedin.com/in/vivian-quan/" className="reach-info" target="_blank">vivian-quan</a>
+                  </div>
+                  <div className="reach-item">
+                    <GoMarkGithub className="devicons" />
+                    <a href="https://github.com/vivxz" className="reach-info" target="_blank">vivxz</a>
+                  </div>
                 </div>
               </div>
             </div>
