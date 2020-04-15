@@ -47,10 +47,6 @@ const Contact = ({ navContact, showDialog, close }) => {
                 <div className="form-header reach-header">Get in touch</div>
                 <div className="all-reach">
                   <div className="reach-item">
-                    <MdMailOutline className="devicons" />
-                    <span className="reach-info">viviannquan@gmail.com </span>
-                  </div>
-                  <div className="reach-item">
                     <FaLinkedinIn className="devicons" />
                     <a href="https://www.linkedin.com/in/vivian-quan/" className="reach-info" target="_blank">vivian-quan</a>
                   </div>
