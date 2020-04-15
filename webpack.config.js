@@ -32,8 +32,9 @@ module.exports = {
     contentBase: path.join(__dirname, './'),
     compress: true,
     port: 9000,
-    // publicPath: '/',
-    // historyApiFallback: true
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
