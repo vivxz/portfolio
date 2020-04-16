@@ -554,6 +554,7 @@ li::before {
   .profile-picture {
     height: 18em;
     width: 46%;
+    margin-top: 16px;
   }
 
   .about-intro {
@@ -561,7 +562,7 @@ li::before {
   }
 
   .about-desc {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .stack {
