@@ -82,7 +82,7 @@ const Project = ({ navApps, showDialog, close }) => {
                 </div>
 
                 <div className="appreview">
-                  <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/demo.gif" alt="LalaLime" className="app-img" />
+                  <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/lalalime.gif" alt="LalaLime" className="app-img" />
                 </div>
                 <div className="app-description">
                   <p>A front-end microservice that replicates the aesthetics and functionality of LuluLemon's navigation bar.</p>
@@ -212,7 +212,7 @@ const Project = ({ navApps, showDialog, close }) => {
                       </div>
 
                       <div className="appreview">
-                        <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/demo.gif" alt="LalaLime" className="app-img" />
+                        <img src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/lalalime.gif" alt="LalaLime" className="app-img" />
                       </div>
                       <div className="app-description">
                         <p>A front-end microservice that replicates the aesthetics and functionality of LuluLemon's navigation bar.</p>
