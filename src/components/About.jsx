@@ -46,21 +46,25 @@ const About = ({ showDialog, navAbout, close }) => {
             <hr />
             <div className="about-header">Technical Skills</div>
             <div className="techskills">
-              <div className="stack-name">Front End:</div>
-              <div className="stack-type">
-                {stacks.frontend.map((stack, i) => {
-                  return (
-                    <Skills stack={stack} key={i} index={i} />
-                  )
-                })}
+              <div className="stacks-container">
+                <div className="stack-name">Front End:</div>
+                <div className="stack-type">
+                  {stacks.frontend.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
               </div>
-              <div className="stack-name">Back End:</div>
-              <div className="stack-type">
-                {stacks.backend.map((stack, i) => {
-                  return (
-                    <Skills stack={stack} key={i} index={i} />
-                  )
-                })}
+              <div className="stacks-container">
+                <div className="stack-name">Back End:</div>
+                <div className="stack-type">
+                  {stacks.backend.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
               </div>
               <div className="stack-name">Testing/Deployment:</div>
               <div className="stack-type">
@@ -70,13 +74,15 @@ const About = ({ showDialog, navAbout, close }) => {
                   )
                 })}
               </div>
-              <div className="stack-name">Developer Tools:</div>
-              <div className="stack-type">
-                {stacks.tools.map((stack, i) => {
-                  return (
-                    <Skills stack={stack} key={i} index={i} />
-                  )
-                })}
+              <div className="stacks-container">
+                <div className="stack-name">Developer Tools:</div>
+                <div className="stack-type">
+                  {stacks.tools.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>
