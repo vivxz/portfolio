@@ -154,12 +154,12 @@ body,
   height: 20em;
 }
 
-.stack-container {
+.stacks-container {
+  margin: 0 0 1em 0;
   width: 100%;
 }
 
 .stack-type {
-  padding: 10px 0 10px 0;
   display: flex;
 }
 
@@ -175,6 +175,7 @@ body,
   font-size: 2rem;
   cursor: pointer;
   width: 100%;
+  margin: 0;
 }
 
 .svg-icon {

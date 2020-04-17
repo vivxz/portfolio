@@ -9,21 +9,21 @@ const Skills = (props) => {
 
   const renderDevIcon = () => {
     if (hovered) {
-      return <i className={props.stack.color} />
+      return <i onMouseEnter={handleMouseHover} className={props.stack.color} />
     } else {
-      return <i className={props.stack.bw} />
+      return <i onMouseEnter={handleMouseHover} className={props.stack.bw} />
     }
   }
   const renderSVGIcon = () => {
     if (hovered) {
-      return <img className="svg-icon" src={props.stack.color} />
+      return <img className="svg-icon" onMouseEnter={handleMouseHover} src={props.stack.color} />
     } else {
-      return <img className="svg-icon" src={props.stack.bw} />
+      return <img className="svg-icon" onMouseEnter={handleMouseHover} src={props.stack.bw} />
     }
   }
 
   return (
-    <p className='stack' onMouseEnter={handleMouseHover}>
+    <p className='stack'>
       {firstLetter === props.stack.color[0] ? renderDevIcon() : renderSVGIcon()}
     </p>
   )
