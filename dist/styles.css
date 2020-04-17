@@ -159,7 +159,7 @@ body,
 }
 
 .stack-type {
-  padding-bottom: 1.5em;
+  padding: 10px 0 10px 0;
   display: flex;
 }
 
