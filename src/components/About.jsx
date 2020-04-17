@@ -66,13 +66,15 @@ const About = ({ showDialog, navAbout, close }) => {
                   })}
                 </div>
               </div>
-              <div className="stack-name">Testing/Deployment:</div>
-              <div className="stack-type">
-                {stacks.testing.map((stack, i) => {
-                  return (
-                    <Skills stack={stack} key={i} index={i} />
-                  )
-                })}
+              <div className="stacks-container">
+                <div className="stack-name">Testing/Deployment:</div>
+                <div className="stack-type">
+                  {stacks.testing.map((stack, i) => {
+                    return (
+                      <Skills stack={stack} key={i} index={i} />
+                    )
+                  })}
+                </div>
               </div>
               <div className="stacks-container">
                 <div className="stack-name">Developer Tools:</div>
