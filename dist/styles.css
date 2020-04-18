@@ -124,9 +124,7 @@ body,
 /* ABOUT */
 
 .about-info {
-  margin-top: -3.6em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: -3.6em 1em 0 1em;
 }
 
 .about-header {
@@ -448,6 +446,18 @@ li::before {
   .links {
     font-size: .6rem;
     padding: 0 1rem 0 1rem;
+  }
+
+  .about-info {
+    margin: -3.6em 0 0 0;
+  }
+
+  .about-header {
+    margin-left: 0.5em;
+  }
+
+  .about-intro {
+    margin: 30px 0 0 0;
   }
 
   .all-me {
