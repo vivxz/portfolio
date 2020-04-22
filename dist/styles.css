@@ -587,7 +587,8 @@ li::before {
   .repo-btn {
     float: left;
     font-size: 8px;
-    width: 30%
+    width: 30%;
+    height: 100%;
   }
 
   .app-title {
