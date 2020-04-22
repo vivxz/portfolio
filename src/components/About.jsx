@@ -28,7 +28,7 @@ const About = ({ showDialog, navAbout, close }) => {
                   My vision and goal as a software engineer is to develop applications and use design as a means to bridge the gap between humans and technology in a way that will benefit the world. We live in an era in which we rely heavily on technology and the advancements we continually make in technology.
                   </p>
                   <p>
-                  As such, I am meticulous and passionate with a strong interest in projects that require both conceptual and analytical thinking. I find joy in designing and developing innovative applications that users will love, and I am always eager to learn more from anyone any any experience.
+                  As such, I am meticulous and passionate with a strong interest in projects that require both conceptual and analytical thinking. I find joy in designing and developing innovative applications that users will love, and I am always eager to learn more from anyone, anything, or any experiences.
                   </p>
                   <p>
                   I am looking to join a team/company that will allow me to leverage my skills, encourage my passions’ and continue to challenge me as I grow in life and career. 
