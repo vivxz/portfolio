@@ -144,7 +144,7 @@ body,
 }
 
 .about-intro {
-  margin: 30px;
+  margin: 15px 30px;
 }
 
 .profile-picture {
@@ -581,6 +581,7 @@ li::before {
   .app-btn {
     width: 100%;
     font-size: 10px;
+    background-color: #fff;
   }
 
   .repo-btn {
@@ -651,9 +652,15 @@ li::before {
 
   .app-btn-container {
     width: 100%;
+    justify-content: center;
+    display: flex;
   }
 
   .app-btn {
     margin-right: 4px;
+    font-size: 12px;
+    width: 100%;
+    height: 33px;
+    background-color: #fff;
   }
 }
