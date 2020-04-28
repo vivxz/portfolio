@@ -6,7 +6,8 @@
   "author": "vivianquan <viviannquan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -d -w",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack --mode production",
     "start": "webpack-dev-server"
   },
   "dependencies": {
