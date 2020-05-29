@@ -580,6 +580,9 @@ li::before {
 
   .about-desc {
     font-size: 12.5px;
+    height: 25em;
+    overflow: scroll;
+    margin-top: 1em;
   }
 
   .app-btn {
