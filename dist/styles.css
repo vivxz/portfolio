@@ -144,7 +144,7 @@ body,
 }
 
 .about-intro {
-  margin: 15px 30px;
+  margin: -16px 30px;
 }
 
 .profile-picture {
@@ -575,14 +575,11 @@ li::before {
   }
 
   .about-intro {
-    margin: 35px 0 0 20px;
+    margin: 1px 0 0 20px;
   }
 
   .about-desc {
     font-size: 12.5px;
-    height: 25em;
-    overflow: scroll;
-    margin-top: 1em;
   }
 
   .app-btn {
