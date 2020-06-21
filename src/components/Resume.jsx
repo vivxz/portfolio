@@ -11,7 +11,7 @@ const Resume = ({ showDialog, navResume, close }) => {
           <MdKeyboardArrowLeft onClick={close} className="close-btn" />
           <div className="resume-container">
             <div className="resume-header">Resume</div>
-            <iframe className="resume" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/vqresume.pdf" />
+            <iframe className="resume" src="https://vivs-portfolio.s3-us-west-1.amazonaws.com/resume.pdf" />
           </div>
         </Dialog>
       ) : null
